@@ -41,6 +41,8 @@ def finish():
         if task['task_name'] == task_name:
             task['status'] = True
             task['hour'] = now.strftime('%H:%M')
+            task['date'] = now.strftime('%m/%d/%Y')
+            task['week'] = now.strftime('%A')
 
     with open(filename, 'w') as f:
         json.dump(content, f, indent=4 )
