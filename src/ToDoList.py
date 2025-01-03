@@ -3,9 +3,9 @@ import datetime
 
 filename = '../resources/tasks.json'
 
-now = datetime.datetime.now()
 
 def addTask():
+    now = datetime.datetime.now()
     print("============================= Adding Task=============================================")
     task_name = input("Enter task name: : ")
     date =str(now.strftime("%d/%m/%Y"))
@@ -32,19 +32,20 @@ def addTask():
 def finish():
     print("=============================== Mark As Completed ===================================================")
     task_name = input("Enter task name: ")
+    now = datetime.datetime.now()
 
     with open(filename, 'r') as f:
         content = json.load(f)
 
     for task in content:
-        if task["task_name"] == task_name:
-            task["status"] = True
-            task["date"] = now.strftime("%d/%m/%Y")
-            task["week"] = now.strftime("%A")
-            task["hour"] = now.strftime("%H:%M")
+        if task['task_name'] == task_name:
+            task['status'] = True
+            task['hour'] = now.strftime('%H:%M')
 
     with open(filename, 'w') as f:
-        json.dump(content, f, indent=4)
+        json.dump(content, f, indent=4 )
+
+
 
 
 def completed():
@@ -54,7 +55,7 @@ def completed():
 
     for task in content:
         if task["status"] == True:
-            print(f"Task Name: {task["task_name"].title()}")
+            print(f"Task Name: {task['task_name'].title()}")
             print(f"Date: {task['date']}")
             print(f"Time: {task['hour']}H {task['week']}")
             print()
@@ -66,7 +67,7 @@ def uncompleted():
 
     for task in content:
         if task["status"] == False:
-            print(f"Task Name: {task["task_name"].title()}")
+            print(f"Task Name: {task['task_name'].title()}")
             print(f"Date: {task['date']}")
             print(f"Time: {task['hour']}H {task['week']}")
             print()
