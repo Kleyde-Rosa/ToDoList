@@ -1,0 +1,36 @@
+# Bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Diretórios de ambiente virtual
+venv/
+env/
+.env/
+
+# Arquivos do sistema operacional (macOS)
+.DS_Store
+
+# Arquivos do sistema operacional (Windows)
+Thumbs.db
+Desktop.ini
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.swp
+*.swo
+
+# Arquivos do IDE (ex: PyCharm, VSCode)
+.idea/
+.vscode/
+
+# Arquivos gerados por ferramentas de empacotamento ou distribuição
+dist/
+build/
+*.egg-info/
+
+# Arquivo de configuração do Jupyter
+.ipynb_checkpoints/
