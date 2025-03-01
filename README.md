@@ -37,7 +37,7 @@ O projeto é organizado da seguinte forma:
 Clone o repositório para o seu computador:
 
 ```bash
-git clone https://github.com/jrdimande/ToDoList
+git clone https://github.com/LissaiDev/ToDoList
 ```
 
 Navegue até o diretório do projeto:
